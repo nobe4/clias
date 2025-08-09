@@ -1,0 +1,12 @@
+{
+  "ls": {
+    "": ["-l", "-a", "-h"],
+    "all": ["-l", "-a"]
+  },
+  "bash": {
+    "sleep": ["-c", "sleep 1 && echo 'slept for 1'"]
+  },
+  "go": {
+    "build --help": ["help", "build"]
+  }
+}
