@@ -7,6 +7,7 @@
     "sleep": ["-c", "sleep 1 && echo 'slept for 1'"]
   },
   "go": {
-    "build --help": ["help", "build"]
+    "build --help": ["help", "build"],
+    "run": ["run", "./cmd/clias/main.go"]
   }
 }
