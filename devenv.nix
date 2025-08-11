@@ -6,7 +6,7 @@
 {
   enterShell = ''
     source ~/.bashrc
-    export PATH=$(find "$(pwd)" -type d -name 'clias_${pkgs.stdenv.hostPlatform.go.GOOS}_${pkgs.stdenv.hostPlatform.go.GOARCH}_*'):$PATH
+    export PATH=$(pwd)/dist:$PATH
   '';
 
   packages = with pkgs; [
@@ -33,7 +33,7 @@
   '';
 
   scripts.build.exec = ''
-    goreleaser --snapshot --clean
+    goreleaser build --auto-snapshot --clean --single-target --output ./dist/clias
   '';
 
   enterTest = ''
