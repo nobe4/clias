@@ -6,6 +6,7 @@
 {
   enterShell = ''
     source ~/.bashrc
+    export PATH=$(find "$(pwd)" -type d -name 'clias_${pkgs.stdenv.hostPlatform.go.GOOS}_${pkgs.stdenv.hostPlatform.go.GOARCH}_*'):$PATH
   '';
 
   packages = with pkgs; [
